@@ -1,0 +1,97 @@
+/* 1. Element, class and ID selectors; global box sizing. */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 7rem; }
+body { margin: 0; background: #f6f3fb; color: #302441; font-family: Arial, Helvetica, sans-serif; line-height: 1.6; }
+p { margin: 0 0 1rem; }
+a { color: inherit; }
+h1, h2, h3 { line-height: 1.1; margin: 0 0 1.2rem; letter-spacing: -.04em; }
+h2 { font-size: clamp(2rem, 4vw, 3.3rem); }
+h3 { font-size: 1.45rem; }
+#header { position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.25rem 6%; background: #f6f3fbf5; border-bottom: 1px solid #ded3e8; }
+.logo { font-size: 1.4rem; font-weight: 800; text-decoration: none; letter-spacing: -.06em; }
+.logo span { color: #687963; }
+nav { display: flex; gap: 1.5rem; }
+nav a { text-decoration: none; font-size: .9rem; }
+nav a:hover { text-decoration: underline; }
+main { width: 88%; max-width: 1120px; margin: auto; }
+.hero { padding: 6rem 0 5rem; min-height: 70vh; }
+.eyebrow { font-size: .72rem; font-weight: bold; letter-spacing: .18em; color: #73558c; }
+h1 { font-size: clamp(3rem, 8vw, 6.5rem); }
+h1 span { color: #9470b8; }
+.hero > p:not(.eyebrow) { max-width: 39rem; font-size: 1.1rem; color: #59645c; }
+.button { display: inline-flex; justify-content: space-between; align-items: center; gap: 2rem; padding: 1rem 1.5rem; border: 1px solid #513575; border-radius: 6px; background: #513575; color: white; font: inherit; text-decoration: none; cursor: pointer; transition: background .3s ease, color .3s ease, transform .3s ease; }
+.button:hover, .button:focus-visible { background: #e5d3f6; color: #302441; transform: translateY(-3px); }
+.hero-note { display: flex; align-items: center; gap: .5rem; margin-top: 1.5rem; font-size: .8rem; color: #65715f; }
+.dot { width: 7px; height: 7px; border-radius: 50%; background: #728b4e; }
+.section { padding: 3rem 0; border-top: 1px solid #ded3e8; }
+.section-heading { margin-bottom: 2rem; }
+.exercise-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
+.card { padding: 2rem; border: 1px solid #ddd1ea; border-radius: 12px; background: #ffffff; min-width: 0; }
+.number { display: block; margin-bottom: 2rem; font-size: .8rem; color: #75806b; }
+.card p { color: #5a655c; }
+.card .highlight { color: #345426; font-weight: bold; }
+/* Descendant, child and adjacent-sibling combinators. */
+.selector-demo p { font-size: .85rem; }
+.selector-demo > p { border-left: 3px solid #8aa566; padding-left: .8rem; }
+.selector-demo + p { font-style: italic; }
+code { display: block; margin-top: 1.5rem; font-size: .75rem; overflow-wrap: anywhere; color: #647153; }
+/* 2. Margin, border, padding, content. */
+.margin-demo { background: #f3e7f7; padding: 1px; border-radius: 6px; }
+.box-demo { margin: 20px; border: 3px solid #6c8953; padding: 24px; text-align: center; background: #eadcf6; }
+.box-demo small { font-size: .75em; }
+/* 3. Percentages and three color notations. */
+.unit-bar { width: 100%; padding: .45rem .7rem; margin-bottom: .5rem; background: #e4d3f2; border-radius: 4px; }
+.unit-bar.half { width: 50%; background: #ccb0e3; }
+.swatches { display: flex; gap: .5rem; margin-top: 1rem; }
+.swatches span { flex: 1; padding: 1rem .3rem; text-align: center; border-radius: 4px; font-size: .7rem; }
+.swatches span:nth-child(1) { background: #d8bfea; }
+.swatches span:nth-child(2) { background: rgb(218, 224, 188); }
+.swatches span:nth-child(3) { background: hsl(42, 45%, 81%); }
+/* 4. Positioning; header is sticky and back-top is fixed. */
+.position-demo { position: relative; height: 120px; display: grid; place-items: center; background: #f0e5f8; border: 1px dashed #8d9c7c; margin-bottom: 1rem; border-radius: 6px; }
+.badge { position: absolute; top: 8px; right: 8px; background: #324c2d; color: white; padding: .2rem .5rem; font-size: .7rem; border-radius: 4px; }
+.back-top { position: fixed; right: 1rem; bottom: 1rem; width: 44px; height: 44px; display: grid; place-items: center; background: #513575; color: white; border-radius: 50%; text-decoration: none; }
+/* 5. Flexbox and Grid. */
+.layout-card { margin-bottom: 1rem; }
+.flex-demo { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem; background: #f1e9f8; border-radius: 6px; }
+.flex-demo span { padding: .7rem 1.2rem; background: #e1c9f1; border-radius: 4px; }
+.grid-demo { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(100px, auto)); gap: 12px; }
+.grid-demo > div { padding: 1.2rem; background: #eadef5; border-radius: 6px; color: #697a56; font-size: .8rem; }
+.grid-demo span { display: block; margin-top: .5rem; color: #513575; font-size: 1.1rem; }
+/* 6. Transition above and a keyframe animation below. */
+.motion-section { padding-bottom: 4rem; }
+.animation-track { max-width: 420px; height: 12px; background: #e7d8f3; border-radius: 20px; margin: 3rem 0 1rem; position: relative; }
+.animation-track span { position: absolute; top: -6px; left: 0; width: 24px; height: 24px; border-radius: 50%; background: #9161b8; animation: travel 3s ease-in-out infinite alternate; }
+@keyframes travel { from { left: 0; } to { left: calc(100% - 24px); } }
+.muted { font-size: .8rem; color: #65715f; }
+footer { display: flex; justify-content: space-between; gap: 1rem; padding: 2rem 6%; border-top: 1px solid #ded3e8; color: #65715f; font-size: .8rem; }
+.skip-link { position: absolute; left: 1rem; top: -5rem; z-index: 20; padding: 1rem; background: white; }
+.skip-link:focus { top: 1rem; }
+:focus-visible { outline: 3px solid #8a6633; outline-offset: 4px; }
+/* 7. Responsive layouts. */
+@media (max-width: 900px) { .grid-demo { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) {
+  #header { flex-direction: column; padding: 1rem 6%; gap: .5rem; }
+  nav { gap: 1.2rem; }
+  .hero { padding: 3rem 0; min-height: auto; }
+  .exercise-grid, .grid-demo { grid-template-columns: 1fr; }
+  .card { padding: 1.4rem; }
+  .number { margin-bottom: 1rem; }
+  .flex-demo { flex-direction: column; align-items: stretch; }
+  footer { flex-direction: column; gap: 0; padding-right: 4rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .button { transition: none; }
+  .animation-track span { animation: none; }
+}
+
+/* Alternate studio layout and visual identity. */
+.hero { text-align: center; }
+.hero > p:not(.eyebrow) { margin-left: auto; margin-right: auto; }
+.hero-note { justify-content: center; }
+.card { border-radius: 20px; box-shadow: 0 6px 24px #51357508; }
+.number { color: #8354a7; font-weight: bold; }
+.section-heading { text-align: center; }
+.motion-section { text-align: center; }
+.animation-track { margin-left: auto; margin-right: auto; }

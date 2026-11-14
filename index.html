@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Practice — Madina Sakiyeva</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header id="header">
+    <a class="logo" href="#">Style<span>Studio.</span></a>
+    <nav aria-label="Main navigation"><a href="#basics">Basics</a><a href="#layouts">Layouts</a><a href="#motion">Motion</a></nav>
+  </header>
+  <main id="main">
+    <section class="hero">
+      <p class="eyebrow">WEB DEVELOPMENT / PROBLEM SET 01</p>
+      <h1>Ideas take shape.<br><span>One style at a time.</span></h1>
+      <p>A collection of CSS exercises covering selectors, the box model, positioning, responsive layouts and animation.</p>
+      <a class="button" href="#basics">Explore the exercises <span aria-hidden="true">↗</span></a>
+      <div class="hero-note"><span class="dot" aria-hidden="true"></span> Built with HTML &amp; CSS only</div>
+    </section>
+    <section id="basics" class="section">
+      <div class="section-heading"><p class="eyebrow">01 / THE FOUNDATIONS</p><h2>The building blocks.</h2></div>
+      <div class="exercise-grid">
+        <article class="card"><span class="number">01</span><h3>Selectors &amp; typography</h3><p class="highlight">This paragraph is selected by a class.</p><p>This paragraph uses an element selector.</p><div class="selector-demo"><p>A direct child paragraph.</p><div><p>A nested descendant paragraph.</p></div></div><p class="adjacent-note">This note follows the demo directly.</p><code>p · .highlight · #header · div &gt; p · div p · div + p</code></article>
+        <article class="card"><span class="number">02</span><h3>The box model</h3><p>The outer area is margin. Inside are border, padding and content.</p><div class="margin-demo"><div class="box-demo">Content<br><small>24px padding · 3px border</small></div></div><code>content → padding → border → margin</code></article>
+        <article class="card"><span class="number">03</span><h3>Units &amp; colors</h3><p>Relative widths adapt to their container.</p><div class="unit-bar">100%</div><div class="unit-bar half">50%</div><div class="swatches"><span>HEX</span><span>RGB</span><span>HSL</span></div><code>px · % · em · rem · vh · vw</code></article>
+        <article class="card"><span class="number">04</span><h3>Positioning</h3><p>Normal text uses static positioning. This canvas is relative; its badge is absolute.</p><div class="position-demo"><span class="badge">absolute</span><span>relative parent</span></div><p>The navigation stays sticky. The arrow in the corner is fixed.</p><code>static · relative · absolute · sticky · fixed</code></article>
+      </div>
+    </section>
+    <section id="layouts" class="section">
+      <div class="section-heading"><p class="eyebrow">02 / MAKE ROOM</p><h2>Arrange your ideas.</h2></div>
+      <article class="card layout-card"><h3>Flexbox — a row that wraps</h3><p>Items are spaced with justify-content and centered with align-items.</p><div class="flex-demo"><span>Plan</span><span>Create</span><span>Review</span><span>Refine</span></div></article>
+      <article class="card layout-card"><h3>Grid — rows and columns</h3><p>Three columns on desktop, two on tablets, one on phones.</p><div class="grid-demo"><div>01<span>Selectors</span></div><div>02<span>Spacing</span></div><div>03<span>Layouts</span></div><div>04<span>Colors</span></div><div>05<span>Motion</span></div><div>06<span>Responsive</span></div></div></article>
+    </section>
+    <section id="motion" class="section motion-section">
+      <p class="eyebrow">03 / A LITTLE MOVEMENT</p><h2>Bring the page to life.</h2><p>Hover over the button or focus it with Tab to see its transition.</p><button class="button demo-button" type="button">Hover or focus me <span aria-hidden="true">↗</span></button><div class="animation-track" aria-label="A ball moves from side to side"><span></span></div><p class="muted">Animation respects your reduced-motion preference.</p>
+    </section>
+  </main>
+  <footer><p>Madina Sakiyeva / CSS Problem Set</p><p>HTML + CSS. No frameworks.</p></footer>
+  <a class="back-top" href="#header" aria-label="Back to top">↑</a>
+</body>
+</html>
